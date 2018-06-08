@@ -19,6 +19,7 @@ Route::get('test', function () {
     Auth::loginUsingId(1);
     dd(Auth::user());
 });
+Route::get('def', 'DefaultController@index');
 
 Auth::routes();
 

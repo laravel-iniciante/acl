@@ -65,6 +65,14 @@
         </style>
     </head>
     <body>
+        <h1>{{$book->title}} -</h1>
+        <p>{{$book->description}}</p>
+        <p>{{$book->user->name}}</p>
+
+        @can('show-book', $book)
+        <a href="#" class="btn"> Editar </a>
+        @endcan
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
